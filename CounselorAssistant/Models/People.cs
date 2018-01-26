@@ -21,7 +21,7 @@ namespace CounselorAssistant.Models
         #region Contsructor
         public People()
         {
-            //DomMarriageStatus = DomainEnums.MarriageStatus.UnkownMarriage;
+            DomMarriageStatus = DomainEnums.MarriageStatus.UnkownMarriage;
             //DomEducation = DomainEnums.Education.UnknownDegree;
             //DomGender = DomainEnums.Gender.Male;
             //DomJobStatus = DomainEnums.JobStatus.OtherJob;

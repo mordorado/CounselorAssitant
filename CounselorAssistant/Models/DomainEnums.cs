@@ -128,11 +128,11 @@ namespace CounselorAssistant.Models
         public enum RecordStatus : long
         {
             [Description("فعال")]
-            RecordEnabled = 1,
+            RecordEnabled = Domains.RecordEnabled,
             [Description("غیرفعال")]
-            RecordDisabled = 2,
+            RecordDisabled = Domains.RecordDisabled,
             [Description("حذف شده")]
-            RecordDeleted = 3
+            RecordDeleted = Domains.RecordDeleted,
         }
 
         [Description("ماههای سال")]
