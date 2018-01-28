@@ -221,7 +221,7 @@ namespace CounselorAssistant.Models
             [Description("دکترا")]
             PhD = Domains.PhD
         }
-        public enum JobStatus
+        public enum JobStatus: long
         {
             [Description("سایر موارد")]
             OtherJob = Domains.OtherJob,

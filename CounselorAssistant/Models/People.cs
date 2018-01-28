@@ -31,27 +31,26 @@ namespace CounselorAssistant.Models
 
 
         [Display(Name = "نام")]
-        [MaxLength(50)]
-        [MinLength(10)]
+        [StringLength(maximumLength:50)]
         [Required(AllowEmptyStrings = false)]
         public String Name { get; set; }
 
         [Display(Name = "نام خانوادگی")]
-        [MaxLength(50)]
-        [MinLength(10)]
+        [StringLength(maximumLength:50)]
         [Required(AllowEmptyStrings = false)]
         public String Family { get; set; }
 
         [Display(Name = "تلفن همراه")]
+        [StringLength(maximumLength:11,MinimumLength =11)]
         public String CellPhoneNumber { get; set; }
 
         [Display(Name = "تلفن")]
         [DataType(DataType.PhoneNumber)]
+        [StringLength(20)]
         public String PhoneNumber { get; set; }
 
         [Display(Name = "کد ملی")]
-        [MaxLength(10)]
-        [MinLength(10)]
+        [StringLength(10)]
         //[Required(AllowEmptyStrings = false)]
         public String NationalCode { get; set; }
 
@@ -68,14 +67,11 @@ namespace CounselorAssistant.Models
 
         [Display(Name = "جنسیت")]
         public DomainEnums.Gender DomGender { get; set; }
-
-        [Display(Name = "تحصیلات")]
-        public DomainEnums.Education DomEducation { get; set; }
-
-        [Display(Name = "وضعیت اشتغال")]
+        ی
         public DomainEnums.JobStatus DomJobStatus { get; set; }
 
         [Display(Name = "عنوان شغل")]
+        [StringLength(50)]
         public String JobTitle { get; set; }
 
     }
