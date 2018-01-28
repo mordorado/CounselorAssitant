@@ -22,9 +22,9 @@ namespace CounselorAssistant.Models
         public People()
         {
             DomMarriageStatus = DomainEnums.MarriageStatus.UnkownMarriage;
-            //DomEducation = DomainEnums.Education.UnknownDegree;
-            //DomGender = DomainEnums.Gender.Male;
-            //DomJobStatus = DomainEnums.JobStatus.OtherJob;
+            DomEducation = DomainEnums.Education.UnknownDegree;
+            DomGender = DomainEnums.Gender.Male;
+            DomJobStatus = DomainEnums.JobStatus.OtherJob;
 
         }
         #endregion  Contsructor

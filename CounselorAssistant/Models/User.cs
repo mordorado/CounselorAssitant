@@ -27,23 +27,16 @@ namespace CounselorAssistant.Models
         #endregion Configuration
 
         [Display(Name = "نام کاربری")]
-        [MaxLength(50)]
-        [MinLength(5)]
+        [MaxLength(50,ErrorMessage ="حداکثر طول نام کاربری 50 حرف می باشد")]
+        [MinLength(5, ErrorMessage = "حداقل طول نام کاربری 5 حرف می باشد")]
         [Required(AllowEmptyStrings = false)]
         [Index("IX_UserName", 1, IsUnique = true)]
         public string UserName { get; set; }
 
         [Display(Name = "عنوان کاربر")]
-        public long PeoID { get; set; }
+        public long? PeoID { get; set; }
         [ForeignKey("PeoID")]
-        public virtual  People People { get; set; }
-        //public virtual ICollection<User> Users { get; set; }
-
-        //[Display(Name = "عنوان کاربر")]
-        //[MaxLength(50)]
-        //[MinLength(10)]
-        //[Required(AllowEmptyStrings = false)]
-        //public string UserTitle { get; set; }
+        public virtual People People { get; set; }
 
         [MaxLength(50)]
         [MinLength(10)]
@@ -53,25 +46,23 @@ namespace CounselorAssistant.Models
         public string Password { get; set; }
 
         [Display(Name = "نوع کاربر")]
+        [Required]
         public DomainEnums.UserType DomUserType { get; set; }
         [NotMapped]
         public string UserTypeTitle
-        {   
+        {
             get { return DomUserType.GetDescription(); ; }
         }
- 
-        //[Display(Name = "سازمان درخواست دهنده")]
-        //[Required(ErrorMessage = "سازمان درخواست دهنده مورد نظر را انتخاب کنید")]
-        //public long OrgID { get; set; }
 
-        //[ForeignKey("OrgID")]
-        //public virtual Organization Organization { get; set; }
-
-        [Display(Name = "تاریخ انقضا")]
-        [Required]
+        [Display(Name = "تاریخ ایجاد")]
         [DataType(DataType.Date)]
         [UIHint("DateTime")]
-        public DateTime ExpireDate { get; set; }
+        public DateTime? CreateDate { get; set; }
+
+        [Display(Name = "تاریخ انقضا")]
+        [DataType(DataType.Date)]
+        [UIHint("DateTime")]      
+        public DateTime? ExpireDate { get; set; }
 
     }
 }
