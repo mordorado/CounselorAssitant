@@ -13,7 +13,7 @@ namespace CounselorAssistant.Controllers.PeopleController
         // GET: People
         public ActionResult Index()
         {
-            return View();
+            return View();      
         }
     }
 }
