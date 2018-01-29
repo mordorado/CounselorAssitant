@@ -13,6 +13,7 @@ namespace CounselorAssistant
         {
             AreaRegistration.RegisterAllAreas();
             RouteConfig.RegisterRoutes(RouteTable.Routes);
+
         }
     }
 }

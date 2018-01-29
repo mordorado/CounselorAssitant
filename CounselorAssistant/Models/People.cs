@@ -29,7 +29,7 @@ namespace CounselorAssistant.Models
         }
         #endregion  Contsructor
 
-
+         
         [Display(Name = "نام")]
         [StringLength(maximumLength:50)]
         [Required(AllowEmptyStrings = false)]
@@ -67,7 +67,7 @@ namespace CounselorAssistant.Models
 
         [Display(Name = "جنسیت")]
         public DomainEnums.Gender DomGender { get; set; }
-        ی
+        public DomainEnums.Education DomEducation { get; set; }
         public DomainEnums.JobStatus DomJobStatus { get; set; }
 
         [Display(Name = "عنوان شغل")]
