@@ -47,10 +47,12 @@ namespace CounselorAssistant.Models
 
             base.OnModelCreating(modelBuilder);
         }
-        public virtual DbSet<Domain> Domains { get; set; }
+        public virtual DbSet<Domain> Domain { get; set; }
         public virtual DbSet<People> People { get; set; }
-        public virtual DbSet<User> Users { get; set; }
-
+        public virtual DbSet<User> User { get; set; }
+        public virtual DbSet<Reservaion> Reservaion { get; set; }
+        public virtual DbSet<Attachment> Attachment { get; set; }
+        public virtual DbSet<FinancialDocument> FinancialDocument { get; set; }
     }
 
 }

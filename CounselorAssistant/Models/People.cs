@@ -6,8 +6,10 @@ using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Data.Entity.ModelConfiguration;
 
+
 namespace CounselorAssistant.Models
 {
+    [Table("People")]
     public class People : BaseEntity
     {
         #region Configuration

@@ -88,7 +88,7 @@
             Domains.Add(new Domain { ID = DomainEnums.Domains.Employed.Value(), Name = DomainEnums.Domains.Employed.ToString(), Title = DomainEnums.Domains.Employed.GetDescription(), Parent = objDomains });
             Domains.Add(new Domain { ID = DomainEnums.Domains.UnEmployed.Value(), Name = DomainEnums.Domains.UnEmployed.ToString(), Title = DomainEnums.Domains.UnEmployed.GetDescription(), Parent = objDomains });
             //----------------------بروزرسانی جدول دومین-----------------------
-            Domains.ForEach(s => context.Domains.AddOrUpdate(s));
+            Domains.ForEach(s => context.Domain.AddOrUpdate(s));
             context.SaveChanges();
             //----------------------------------------------------------------------------------------------
             //People.Add(new People { Name = "راهبر", Family = "ارشد" });

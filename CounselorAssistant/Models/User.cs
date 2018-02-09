@@ -10,6 +10,7 @@ using System.Data.Entity.ModelConfiguration;
 
 namespace CounselorAssistant.Models
 {
+    [Table("User")]
     public class User : BaseEntity
     {
         #region Configuration

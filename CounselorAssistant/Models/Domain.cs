@@ -8,6 +8,7 @@ using System.Data.Entity.ModelConfiguration;
 
 namespace CounselorAssistant.Models
 {
+    [Table("Domain")]
     public class Domain : Object
     {
         #region Configuration
@@ -28,7 +29,6 @@ namespace CounselorAssistant.Models
             Status = true;
             Desc = string.Empty;
         }
-
         [ScaffoldColumn(false)]
         [Display(Name = "کد شناسایی")]
         [Key]
