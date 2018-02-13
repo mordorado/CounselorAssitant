@@ -459,5 +459,20 @@ namespace CounselorAssistant.Models
             OtherPayment = Domains.OtherPayment
 
         }
+
+        /// <summary>
+        /// تابع تشخیص رکورد درای وضعیت حذف شده
+        /// </summary>
+        /// <param name="Status">وضعیت رکورد</param>
+        /// <returns>مقدار بولین که در صورتی که رکورد حذف منطقی شده باشد مقدار  صحیح برمیگرداند</returns>
+        public static bool IsDeletedRecord(RecordStatus Status)
+        {            
+            return (Status != RecordStatus.RecordDeleted);
+        }
+
+        public static bool IsValidRecord(RecordStatus Status)
+        {
+            return Status.In(DomainEnums.RecordStatus.RecordDisabled, DomainEnums.RecordStatus.RecordEnabled);
+        }
     }
 }

@@ -4,6 +4,7 @@ using System.Globalization;
 using System.Linq;
 using System.Text.RegularExpressions;
 using System.Web;
+using CounselorAssistant.Models;
 
 public static class Utility
 {
@@ -24,4 +25,5 @@ public static class Utility
         //return Regex.IsMatch(datetime, @"^(13\d{2}|[1-9]\d)/(1[012]|0?[1-9])/([12]\d|3[01]|0?[1-9])  ([01][0-9]|2[0-3]):([0-5]?[0-9]):([0-5]?[0-9])$");
         return Regex.IsMatch(datetime, @"^(13\d{2}|[1-9]\d)/(1[012]|0?[1-9])/([12]\d|3[01]|0?[1-9])$");
     }
+
 }
